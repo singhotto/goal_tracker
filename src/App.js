@@ -1,8 +1,8 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import { Header } from './components';
-import { Dashboard, DailyGoals, MainGoals, Routines } from './pages';
+import { Header, HistoryTable } from './components';
+import { Dashboard, DailyGoals, MainGoals, Routines, History } from './pages';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
                 <Route path="/dailyGoals" element={(<DailyGoals />)} />
                 <Route path="/mainGoals" element={(<MainGoals />)} />
                 <Route path="/routines" element={(<Routines />)} />
+                <Route path="/history" element={(<History />)} />
           </Routes>
       </BrowserRouter>
     </div>

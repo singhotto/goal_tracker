@@ -1,26 +1,36 @@
 
 import MailIcon from '@mui/icons-material/Mail';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import FlagCircleIcon from '@mui/icons-material/FlagCircle';
+import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import HistoryIcon from '@mui/icons-material/History';
 
 export const links = [
     {
       title: 'Dashboard',
       name: 'dashboard',
-      icon: <MailIcon />,
+      icon: <DashboardIcon />,
     },
 
     {
         title: 'Main Goals',
         name: 'mainGoals',
-        icon: <MailIcon />,
+        icon: <FlagCircleIcon />,
     },
       {
         title: 'Daily Goals',
         name: 'dailyGoals',
-        icon: <MailIcon />,
+        icon: <FormatListNumberedIcon />,
       },
       {
-        title: 'Routine',
-        name: 'routines',
-        icon: <MailIcon />,
+        title: 'Tasks',
+        name: 'tasks',
+        icon: <TaskAltIcon />,
+      },
+      {
+        title: 'History',
+        name: 'history',
+        icon: <HistoryIcon />,
       }
 ]

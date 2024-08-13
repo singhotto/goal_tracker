@@ -37,7 +37,6 @@ const Header = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {currentPage}
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
       <Sidebar open={open} toggleDrawer={toggleDrawer} updateCurrentPage={updateCurrentPage} />
