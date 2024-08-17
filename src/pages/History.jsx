@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Grid, Box, Paper } from '@mui/material';
+import React from 'react';
 
 import { HistoryTable } from '../components';
 

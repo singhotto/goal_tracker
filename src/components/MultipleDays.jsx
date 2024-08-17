@@ -8,7 +8,7 @@ import CheckBoxIcon from '@mui/icons-material/CheckBox';
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
-export default function MultipleDays({reset, onChange}) {
+export default function MultipleDays({reset, onChange, errors}) {
   return (
     <Autocomplete
       multiple
@@ -34,7 +34,12 @@ export default function MultipleDays({reset, onChange}) {
       }}
       style={{ width: 500 }}
       renderInput={(params) => (
-        <TextField {...params} label="Work Days"/>
+        <TextField 
+        {...params} 
+        label="Work Days" 
+        error={!!errors.work_days}
+        helperText={errors.work_days}
+        />
       )}
     />
   );

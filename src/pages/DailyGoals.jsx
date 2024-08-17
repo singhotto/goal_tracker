@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 import { Grid, Box, Paper } from '@mui/material';
 
-import { DailyForm, DailyTable } from '../components';
+import { DailyTable } from '../components';
 
 const DailyGoals = () => {
   const [data, setData] = useState([]);
-
-  const handleFormSubmit = (formData) => {
-    setData((prev) => [
-      ...prev,
-      { ...formData, completed: false },
-    ]);
-  };
 
   const handleComplete = (index) => {
     setData((prev) =>
@@ -28,13 +21,6 @@ const DailyGoals = () => {
   return (
     <Box sx={{ flexGrow: 1, p: 2 }}>
       <Grid container spacing={2} justifyContent="center">
-        {/* Form goes here */}
-        <Grid item xs={12} md={6}>
-          <Paper elevation={3} sx={{ p: 2 }}>
-            <DailyForm onSubmit={handleFormSubmit} />
-          </Paper>
-        </Grid>
-
         {/* Table goes here */}
         <Grid item xs={12}>
           <Paper elevation={3} sx={{ p: 2 }}>

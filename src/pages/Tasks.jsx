@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Grid, Box, Paper } from '@mui/material';
 
-import { MainTable } from '../components';
+import { TaskTable } from '../components';
 
-const MainGoals = () => {
+const Tasks = () => {
   const [data, setData] = useState([]);
 
   const handleFormSubmit = (formData) => {
@@ -31,7 +31,7 @@ const MainGoals = () => {
         {/* Table goes here */}
         <Grid item xs={12}>
           <Paper elevation={3} sx={{ p: 2 }}>
-            <MainTable data={data} onComplete={handleComplete} onRemove={handleRemove} />
+            <TaskTable data={data} onComplete={handleComplete} onRemove={handleRemove} />
           </Paper>
         </Grid>
       </Grid>
@@ -39,4 +39,4 @@ const MainGoals = () => {
   );
 };
 
-export default MainGoals;
+export default Tasks;

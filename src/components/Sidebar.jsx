@@ -10,7 +10,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { NavLink } from 'react-router-dom';
 import { links } from '../data/routesData';
 
-const Sidebar = ({ open, toggleDrawer, updateCurrentPage }) => {
+const Sidebar = ({ open, toggleDrawer }) => {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
@@ -18,10 +18,7 @@ const Sidebar = ({ open, toggleDrawer, updateCurrentPage }) => {
           <ListItem key={link.name} disablePadding>
             <NavLink
               to={`/${link.name}`}
-              onClick={()=>{
-                toggleDrawer(false);
-                updateCurrentPage(link.title);
-              }}
+              onClick={toggleDrawer(false)}
               style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}
             >
               <ListItemButton>
